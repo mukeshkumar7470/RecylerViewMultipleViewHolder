@@ -14,10 +14,10 @@ class MainActivity : AppCompatActivity() {
 
         // this creates a vertical layout Manager
         recyclerview.layoutManager = LinearLayoutManager(this)
+        val dataItem = ArrayList<DataModel>()
 
-        val datas = ArrayList<DataModel>()
         // data for Header Layout
-        datas.add(
+        dataItem.add(
             DataModel.HeaderData(
                 title = "Heading",
                 description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
@@ -26,21 +26,14 @@ class MainActivity : AppCompatActivity() {
 
         // data for Sub Item Layout
         for (i in 1..20) {
-            datas.add(
+            dataItem.add(
                 DataModel.ItemsViewModel(
                     name = "PANDIYAN $i", email = "TEST$i@GMAIL.COM"
                 )
             )
         }
-        datas.add(
-            DataModel.HeaderData(
-                title = "Mukesh",
-                description = "Mukesh  text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-            )
-        )
 
-        val adapter = CustomAdapter(mList = datas)
-
+        val adapter = CustomAdapter(mList = dataItem)
         recyclerview.adapter = adapter
     }
 }

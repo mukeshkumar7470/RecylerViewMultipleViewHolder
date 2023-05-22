@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
 
 class CustomAdapter(val mList: List<DataModel>) : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
